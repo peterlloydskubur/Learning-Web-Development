@@ -22,6 +22,19 @@ h1 {
   color: #4ECCA3;
 }
 
+a{
+
+  background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+
 p {
   font-size: 2rem;
   color: #4ECCA3;
