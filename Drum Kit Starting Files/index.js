@@ -1,9 +1,14 @@
 
-for (let index = 0; index < document.querySelectorAll("button").length; index++) {
 
-    document.querySelectorAll("button")[index].addEventListener("click",function(){
-        alert("I got click");
+for (let index = 0; index < document.querySelectorAll(".drum").length; index++) {
+
+    document.querySelectorAll(".drum")[index].addEventListener("click",function(){
+
+        this.style.color = "white";
+        
+        
     });
 
 }
+
 
