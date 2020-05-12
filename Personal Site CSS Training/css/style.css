@@ -1,0 +1,32 @@
+.top_container{
+
+    border: 10px solid black;
+    padding: 20px;
+    font-size: 75%;
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+
+}
+
+.middle_container{
+
+    border: 20px solid black;
+    margin-left: 260px;
+    height: 200px;
+    width: 200px;
+    background-color:red;
+    
+}
+
+.bottom_container{
+
+    border: 10px solid black;
+    margin-left: 500px;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+
+
+}
+
