@@ -53,3 +53,7 @@ for (let index = 0; index < document.querySelectorAll(".drum").length; index++) 
 
 }
 
+document.addEventListener("keydown",function(event){
+    console.log(event);
+    
+})
