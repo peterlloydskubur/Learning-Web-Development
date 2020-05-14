@@ -67,7 +67,7 @@ document.addEventListener("keydown",function(e){
     buttonAnimation(e.key)
 });
 
-
+// Animating the KeyPress
 function buttonAnimation(button){
 
     var activeButton = document.querySelector("." + button);
