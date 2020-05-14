@@ -8,6 +8,7 @@ for (let index = 0; index < document.querySelectorAll(".drum").length; index++) 
         
         //Switch recives eventListeners recived innerHTML
         switch (buttonInnerHTML) {
+            
             case "w":
                 var tom1 = new Audio("sounds/tom-1.mp3");
                 tom1.play();         
