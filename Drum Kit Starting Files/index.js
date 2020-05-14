@@ -8,8 +8,9 @@ for (let index = 0; index < document.querySelectorAll(".drum").length; index++){
         
         let buttonInnerHTML = this.innerHTML;
 
-        //If event is called, we call the playSound function with the buttons inner html
+    //If event is called, we call the playSound function with the buttons inner html
         playSound(buttonInnerHTML) 
+        buttonAnimation(buttonInnerHTML)
                  
     });
 
@@ -63,4 +64,19 @@ function playSound(buttonPress){
 // Detecting KeyPress.
 document.addEventListener("keydown",function(e){
     playSound(e.key);
+    buttonAnimation(e.key)
 });
+
+
+function buttonAnimation(button){
+
+    var activeButton = document.querySelector("." + button);
+    
+    activeButton.classList.add("pressed");
+    setTimeout(function(){
+        activeButton.classList.remove("pressed")
+    }, 100);
+    
+
+
+}
