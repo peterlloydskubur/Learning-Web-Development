@@ -37,7 +37,7 @@ $(".btn").on("click", function () {
     }
 
     // Player did not made a mistake and Player went true the whole game pattern
-    // If statment is true, start new level with 1 second delay.
+    // If statment is true, start new level with 1 second delay.blue
     if (!hasLost && userClickedPattern.length == gamePattern.length) {
         setTimeout(function () { nextSequence() }, 1000);
 
@@ -74,7 +74,7 @@ function nextSequence() {
 function youLost() {
     hasLost = true;
 
-    $("#level-title").text("n00b you lost, Press any key to Start!");
+    $("#level-title").text("n00b you lost at " + "Level " + gamePattern.length +" Press any key to Start!");
 
 }
 
