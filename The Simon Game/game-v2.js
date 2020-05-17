@@ -1,20 +1,31 @@
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
-
-//Creating first random color
-
-
-var randomChosenColour = buttonColours[nextSequence()];
+var randomChosenColour;
+var level = 0
 
 
-//Creating random pattern
-gamePattern.push(randomChosenColour);
+// Creating the first turn.
+$(document).one("keypress", function () {
+    randomChosenColour = buttonColours[nextSequence()];
+
+    //Creating random pattern
+    gamePattern.push(randomChosenColour);
+
+    $("#level-title").text("level " + level)
+    console.log("key was pressed");
+
+    // Flashing the selected random color and playing its sound effect
+    $("#"+randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    playSound(randomChosenColour)
+
+    
+    
+
+});
 
 
-// Flashing the selected random color and playing its sound effect
-$("#"+randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
-playSound(randomChosenColour)
+
 
 
 
