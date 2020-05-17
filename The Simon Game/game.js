@@ -1,42 +1,62 @@
+// Working until level one.
 
+var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
+var randomChosenColour;
+var level = 0
 
-var buttonColors = ["red","blue","green","yellow"];
+
+// Creating the first turn.
+$(document).one("keypress", function () {
+
+    
+    randomChosenColour = buttonColours[nextSequence()];
+
+    //Creating random pattern
+    gamePattern.push(randomChosenColour);
 
 
-function nextSequence(){
-    return Math.floor(Math.random() * 4)
+    // Flashing the selected random color and playing its sound effect
+    $("#"+randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    playSound(randomChosenColour)
+
+});
+
+
+
+//Detect button press and call functions
+$(".btn").on("click", function () {
+
+    var userChosenColor = ($(this).attr("id"));
+
+    userClickedPattern.push(userChosenColor);
+    playSound(userChosenColor)
+    animatePress(userChosenColor)
+     
+
+});
+
+
+function playSound(name){
+    new Audio("sounds/" + name + ".mp3").play()
 
 }
 
-// Waiting for user to press "a" to start generating Colors.
-$(document).keydown(function (e) {  
-    if (e.key === "a") {
-        // Pushing a new color to gamePattern sequence
-        gamePattern.push(buttonColors[nextSequence()])
 
-        //Changing header text after " a " is pressed
-        $("#level-title").text("Game Starting" )
+function animatePress(currentColour){
+    $("#"+currentColour).addClass("pressed");
+    setTimeout(function(){$("#"+currentColour).removeClass("pressed"); }, 100);
 
-    }else{
-        console.log("User has not pressed a")
-    }
+
+}
+
+
+function nextSequence(){
+
+    $("#level-title").text("level " + level)
+    level++
+    return randomNumber = Math.floor(Math.random() * 4)
     
-});
 
-
-
-// Storing all user clicks in the userClickedPattern
-$(".btn").on("click", function (e) {
-    userClickedPattern.push(($(this).attr("id")));
-
-});
-
-if (userClickedPattern === gamePattern){
-    level = 0;
-    gamePattern.push(buttonColors[nextSequence()])
-    $("#level-title").text("Level" + level )
-    
-    
 }
