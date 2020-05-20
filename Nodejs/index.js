@@ -1,3 +1,13 @@
-const fs = require('fs');
+const sh = require('superheroes');
+const supervillains = require('supervillains');
+ 
+// console.log(superheroes.all);
 
-fs.copyFileSync('file1.txt', 'file2.txt');
+
+
+var superhero = sh.random()
+var evil = supervillains.random();
+
+
+console.log("Todays battle we will have " + superhero + " vs " + evil)
+
