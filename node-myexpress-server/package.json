@@ -1,0 +1,12 @@
+{
+  "name": "myexpress-server",
+  "version": "1.0.0",
+  "description": "Creating server with express and nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Peter",
+  "license": "ISC"
+}
