@@ -39,7 +39,9 @@ app.post('/', function(req,res){
             res.write("<img src=" + imageURL+ ">");
 
             res.send();
+            
         });
+
     });
         
 });
