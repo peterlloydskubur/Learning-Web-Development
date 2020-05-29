@@ -8,7 +8,12 @@ a:focus,
 a:hover {
   color: #fff;
 }
-
+.cover-heading {
+  color: lightgreen;
+}
+#failColor {
+  color: red;
+}
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
