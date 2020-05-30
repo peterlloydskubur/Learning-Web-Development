@@ -8,14 +8,14 @@ var app = express()
 app.use(express.static(__dirname + '/public'));
 
 //Adding bodyParser to express
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 
-/
+
 app.get("/",function(req,res){
     res.sendFile(__dirname + "/signup.html");
 });
 
-
+//Reciving information from signup form
 app.post('/', function(req,res){
     const userEmail = req.body.inputEmail;
     const userName = req.body.name;
