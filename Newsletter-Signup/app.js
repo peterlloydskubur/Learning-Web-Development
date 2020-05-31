@@ -22,7 +22,7 @@ app.post('/', function (req, res) {
     const userName = req.body.name;
     const userLastName = req.body.lastName;
 
-    // How get this all from app.post and into some sort of function?
+    // How get this all from app.post and into some sort of function? Is even needed?
     var options = {
         'method': 'POST',
         'url': 'https://us10.api.mailchimp.com/3.0/lists/e4c2ee48be/members/',
