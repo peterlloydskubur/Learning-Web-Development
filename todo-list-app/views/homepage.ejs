@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <!-- Adding jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
@@ -9,11 +12,26 @@
 </head>
 
 <body>
-    <% if(todaysDate === "Saturday" || todaysDate === "Sunday" ){ %>
-    <h1 style="color: red;">Today is <%= todaysDate %> </h1>
-    <% }  else { %>
-    <h1 style="color: blue;">Today is <%= todaysDate %> </h1>
-    <% } %>
+
+    <h1>Today is <%= todaysDate %> </h1>
+
+    <ul>
+        <li>Buy food</li>
+        <li>Walk dogs</li>
+        <li>Go to gym</li>
+
+    </ul>
+
+
+    <form class="" action="/" method="POST">
+
+        <input type="text" name="newTodo"><br>
+
+        <input type="submit" value="Submit" />
+
+    </form>
+
+
 
 
 
