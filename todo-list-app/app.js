@@ -4,7 +4,7 @@ const app = express()
 
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // Setting how the date will be shown
 var options = {
@@ -15,32 +15,37 @@ var options = {
     day: 'numeric'
 };
 
-var today = new Date();
+var itemList = []
 
-// Calling " today " to show as a string with our " options " object
-console.log(today.toLocaleDateString("de-DE", options));
+var today = new Date();
 
 
 app.get('/', function (req, res) {
 
+
     res.render("homepage", {
 
-        todaysDate: today.toLocaleDateString("de-DE", options)
+        todaysDate: today.toLocaleDateString("de-DE", options),
+        itemList: itemList,
 
     });
 
-    app.post("/", function (req, res) {
-        console.log(req.body.newTodo);
-    
-    });
 
 });
 
+// Reciving new information to add on To-Do List
+app.post("/", function (req, res) {
 
-// app.post("/AddToList", function (req, res) {
-//     console.log(req.body.newTodo);
+    itemList.push(req.body.newTodo)
 
-// })
+    console.log(itemList);
+
+    // Redirecting back to main page so the new item could be rendered.
+    res.redirect("/")
+});
+
+
+
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');

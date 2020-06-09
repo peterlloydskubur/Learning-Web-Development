@@ -15,19 +15,19 @@
 
     <h1>Today is <%= todaysDate %> </h1>
 
+    <!-- Looping itemList and adding new items to list when submited with EJS tags ( <% %> )-->
     <ul>
-        <li>Buy food</li>
-        <li>Walk dogs</li>
-        <li>Go to gym</li>
-
+    <% for (let index = 0; index < itemList.length; index++) { %>
+        <li> <%= itemList[index] %></li>
+        <% } %>
     </ul>
 
-
+    <!-- POST the submited text to MAIN (" / ") Page -->
     <form class="" action="/" method="POST">
 
         <input type="text" name="newTodo"><br>
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Add" />
 
     </form>
 
