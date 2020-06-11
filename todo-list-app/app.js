@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 let options = {
 
     weekday: 'long',
-    year: 'numeric',
+    // year: 'numeric',
     month: 'long',
     day: 'numeric'
 };
@@ -41,7 +41,7 @@ app.post("/", function (req, res) {
 
     //TODO: jQuery submit form when ENTER key is pressed
 
-    itemList.push(req.body.newTodo)
+    itemList.push(req.body.newItem)
 
     // Redirecting back to main page so the new item could be rendered.zz
     res.redirect("/")

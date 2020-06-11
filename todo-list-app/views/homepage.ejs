@@ -5,7 +5,9 @@
     <!-- Adding jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-
+    <!-- Adding google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/styles.css">
 
     <meta charset="UTF-8">
@@ -18,29 +20,33 @@
 
 
     <div class="box" id="heading">
-        <h1 >Today is <%= todaysDate %> </h1>
+        <h1> <%= todaysDate %> </h1>
     </div>
 
-    <div class="box">
-        <!-- Looping itemList and adding new items to list when submited with EJS tags ( <% %> )-->
-        <ul>
+    <div class="box ">
+
+        <!-- Looping itemList and adding new items to list when submited( EJS tags )-->
         <% for (let index = 0; index < itemList.length; index++) { %>
-            <li> <%= itemList[index] %></li>
-            <% } %>
-        </ul>
-    </div>
+        <div class="item">
+            <input type="checkbox">
+            <p> <%= itemList[index] %> </p>
+        </div>
+        <% } %>
 
         <!-- POST the submited text to MAIN (" / ") -->
-        <form class="todo" action="/" method="POST">
+        <form class="item" action="/" method="POST">
 
-            <input type="text" name="newTodo"><br>
+            <input type="text" name="newItem" placeholder="New item" autocomplete="off"><br>
             
-            <div class="button"> 
-                <input class="button" type="submit" value="Add" />
+            <div class="button">
+                <button type="submit" name="button">+</button>
             </div>
 
         </form>
-    
+
+    </div>
+
+
 
     <footer> Zudrit studio </footer>
 
