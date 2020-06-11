@@ -6,8 +6,11 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
+// Express use public to enable CSS on localhost
+app.use(express.static(__dirname + '/public'));
+
 // Setting how the date will be shown
-var options = {
+let options = {
 
     weekday: 'long',
     year: 'numeric',
@@ -15,9 +18,9 @@ var options = {
     day: 'numeric'
 };
 
-var itemList = []
+let itemList = []
 
-var today = new Date();
+let today = new Date();
 
 
 app.get('/', function (req, res) {
@@ -36,14 +39,15 @@ app.get('/', function (req, res) {
 // Reciving new information to add on To-Do List
 app.post("/", function (req, res) {
 
+    //TODO: jQuery submit form when ENTER key is pressed
+
     itemList.push(req.body.newTodo)
 
-    console.log(itemList);
-
-    // Redirecting back to main page so the new item could be rendered.
+    // Redirecting back to main page so the new item could be rendered.zz
     res.redirect("/")
-});
 
+
+});
 
 
 

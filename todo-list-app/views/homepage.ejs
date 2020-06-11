@@ -5,6 +5,9 @@
     <!-- Adding jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+
+    <link rel="stylesheet" href="css/styles.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
@@ -13,27 +16,36 @@
 
 <body>
 
-    <h1>Today is <%= todaysDate %> </h1>
 
-    <!-- Looping itemList and adding new items to list when submited with EJS tags ( <% %> )-->
-    <ul>
-    <% for (let index = 0; index < itemList.length; index++) { %>
-        <li> <%= itemList[index] %></li>
-        <% } %>
-    </ul>
+    <div class="box" id="heading">
+        <h1 >Today is <%= todaysDate %> </h1>
+    </div>
 
-    <!-- POST the submited text to MAIN (" / ") Page -->
-    <form class="" action="/" method="POST">
+    <div class="box">
+        <!-- Looping itemList and adding new items to list when submited with EJS tags ( <% %> )-->
+        <ul>
+        <% for (let index = 0; index < itemList.length; index++) { %>
+            <li> <%= itemList[index] %></li>
+            <% } %>
+        </ul>
+    </div>
 
-        <input type="text" name="newTodo"><br>
+        <!-- POST the submited text to MAIN (" / ") -->
+        <form class="todo" action="/" method="POST">
 
-        <input type="submit" value="Add" />
+            <input type="text" name="newTodo"><br>
+            
+            <div class="button"> 
+                <input class="button" type="submit" value="Add" />
+            </div>
 
-    </form>
+        </form>
+    
+
+    <footer> Zudrit studio </footer>
 
 
-
-
+    <script src="D:\Learning-Web-Development\todo-list-app\app.js"></script>
 
 </body>
 
