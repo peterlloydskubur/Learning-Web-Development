@@ -64,7 +64,7 @@ button {
   background-color: #A683E3;
   color: #fff;
   font-size: 30px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   border-width: 0;
 }
 
@@ -90,7 +90,17 @@ input[type="text"]:focus {
 }
 
 footer {
-  color: white;
+  /* color: white;
   color: rgba(0, 0, 0, 0.5);
+  text-align: center; */
+
+  position: fixed;
+  left: 
+  0;
+  bottom: 5%;
+  width: 100%;  
+  background-color:;
+  color: white;
   text-align: center;
+
 }
