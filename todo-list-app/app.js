@@ -28,8 +28,10 @@ app.get('/', function (req, res) {
 
     res.render("homepage", {
 
-        todaysDate: today.toLocaleDateString("de-DE", options),
+        // todaysDate: today.toLocaleDateString("de-DE", options),
+        listTitle: "Some title",
         itemList: itemList,
+         
 
     });
 
