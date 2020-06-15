@@ -1,37 +1,33 @@
 <%- include("header") %>
 
-
 <body>
+  <div class="box" id="heading">
+    <h1><%= listTitle %></h1>
+  </div>
 
-    <div class="box" id="heading">
-        <h1> <%= todaysDate %> </h1>
+  <div class="box">
+    <!-- Looping itemList and adding new items to list when submited( EJS tags )-->
+    <% for (let index = 0; index < itemList.length; index++) { %>
+    <div class="item">
+      <input type="checkbox" />
+      <p><%= itemList[index] %></p>
     </div>
+    <% } %>
 
-    <div class="box ">
+    <!-- POST the submited text to MAIN (" / ") -->
+    <form class="item" action="/" method="POST">
+      <input
+        type="text"
+        name="newItem"
+        placeholder="New item"
+        autocomplete="off"
+      /><br />
 
-        <!-- Looping itemList and adding new items to list when submited( EJS tags )-->
-        <% for (let index = 0; index < itemList.length; index++) { %>
-        <div class="item">
-            <input type="checkbox">
-            <p> <%= itemList[index] %> </p>
-        </div>
-        <% } %>
-
-        <!-- POST the submited text to MAIN (" / ") -->
-        <form class="item" action="/" method="POST">
-
-            <input type="text" name="newItem" placeholder="New item" autocomplete="off"><br>
-
-            <div class="button">
-                <button type="submit" name="button">+</button>
-            </div>
-
-        </form>
-
-    </div>
-
-
+      <div class="button">
+        <button type="submit" name="button">+</button>
+      </div>
+    </form>
+  </div>
 </body>
 
 <%- include('footer') %>
-
