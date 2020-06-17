@@ -2,8 +2,9 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
+const date = require(__dirname + '/date.js');
 
+const app = express();
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,24 +12,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Express use public to enable CSS on localhost
 app.use(express.static(__dirname + '/public'));
 
-// Setting how the date will be shown
-let options = {
-  weekday: 'long',
-  // year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-};
-
-let itemList = [];
-let workList = [];
-
-let today = new Date();
-
-let todaysDate = today.toLocaleDateString('de-DE', options);
+const itemList = [];
+const workList = [];
 
 app.get('/', function (req, res) {
   res.render('homepage', {
-    listTitle: todaysDate,
+    listTitle: date.weekday(),
     itemList: itemList,
     // workList: workList,
   });
