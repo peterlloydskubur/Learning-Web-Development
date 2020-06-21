@@ -15,14 +15,14 @@ app.get("/", function (req, res) {
     res.sendFile(__dirname + "/signup.html");
 });
 
-//Reciving information from signup form
 
+// Reciving information from signup form
 app.post('/', function (req, res) {
     const userEmail = req.body.inputEmail;
     const userName = req.body.name;
     const userLastName = req.body.lastName;
 
-    // How get this all from app.post and into some sort of function? Is even needed?
+    // Info to send to API
     var options = {
         'method': 'POST',
         'url': 'https://us10.api.mailchimp.com/3.0/lists/e4c2ee48be/members/',
@@ -35,9 +35,10 @@ app.post('/', function (req, res) {
 
     };
 
-    // How get this all from app.post and into some sort of function?
+    // Sending info and checking if is recived
     request(options, function (error, response) {
 
+        // Redirecting user after reciving Status Code response
         if (response.statusCode === 200){
             res.sendFile(__dirname + "/success.html")
             
@@ -48,14 +49,13 @@ app.post('/', function (req, res) {
 
         console.log(response.statusCode);
         
-        // if (error) throw new Error(error);
     });
 
 
 });
 
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000 , function () {
     console.log('Example app listening on port 3000!');
 });
 

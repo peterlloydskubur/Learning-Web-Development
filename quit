@@ -1,0 +1,285 @@
+[33mcommit 012e2ea852c7cc66b6b8d90833cce07e1ea8d1b1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Tue Jun 9 16:18:15 2020 +0300
+
+     Rendering date with variable working
+
+[33mcommit 1d897dd4498ade233c745c3e14fe03b9aed3742c[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sun May 31 23:27:28 2020 +0300
+
+    asd
+
+[33mcommit 9e994b7dc048647b14bc04a4d3e99fe9e555046a[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sun May 31 03:01:29 2020 +0300
+
+    Finished Newsletter website
+
+[33mcommit b6c930b4f81950bfae420978c55932ec61c98cb8[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sat May 30 23:19:41 2020 +0300
+
+    updated version
+
+[33mcommit 3a1d4dde2a131e2c65ac336806fa1cbbee1ad37b[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sat May 30 18:34:58 2020 +0300
+
+    Update app.js
+
+[33mcommit 12dee6e09d1d389c066890b4cae0a3af03ad4f14[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sat May 30 02:26:05 2020 +0300
+
+    mail champ
+
+[33mcommit 21103bcda4a393ac93ca45bd413841de82ee8802[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Fri May 29 00:52:08 2020 +0300
+
+    Creating bootstrap for Newsletter website
+
+[33mcommit 0ae9b10c0a0390d5af72e9fcbda5be7723a19a86[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 28 17:59:03 2020 +0300
+
+    Creating a Newsletter-Signup site
+
+[33mcommit 67dc6d94d43c5aef4279a85e8079baba93a18042[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 28 16:13:31 2020 +0300
+
+    Update app.js
+
+[33mcommit df3ccec9f7c01ba3a56f017e98f12313433ce629[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Wed May 27 21:29:27 2020 +0300
+
+    Full weather Job
+
+[33mcommit 0c851d1e4fb9fc43a0f3a631c0d20dff04b96361[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Tue May 26 23:13:06 2020 +0300
+
+    weather app fixing
+
+[33mcommit 552b8978fe2e034c499e2aea7b2b15725f431c0b[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Mon May 25 18:34:38 2020 +0300
+
+    Creating weather app
+
+[33mcommit 855052f5de07666049e86a66f6fa034da36cee7a[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sun May 24 19:22:08 2020 +0300
+
+    Learning about API's
+
+[33mcommit d1a4254fbdd821592a11daa088b239680c989f3e[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Fri May 22 21:36:52 2020 +0300
+
+    bmi cal
+
+[33mcommit 3515789353bbda9d1b89703153d3cbfe5e45f989[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Fri May 22 16:45:21 2020 +0300
+
+    Calculator with Nodejs and express
+
+[33mcommit 3b83353da0cbb6618275b801acb4f23bbe76724b[m
+Merge: 80e3edd c229b2e
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Fri May 22 13:23:53 2020 +0300
+
+    Merge branch 'master' of https://github.com/peterlloydskubur/Learning-Web-Development
+
+[33mcommit 80e3eddf715d541fc1043fe767f01eb69db550d4[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Fri May 22 13:23:42 2020 +0300
+
+    Main game
+    
+    a
+
+[33mcommit c229b2e42d2b243a10ceba930b55817dea1f75ba[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Fri May 22 02:42:10 2020 +0300
+
+    express npm
+
+[33mcommit d92f78351746fe752809923099f4b3898d8de335[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Fri May 22 02:33:46 2020 +0300
+
+    server with nodejs and express
+
+[33mcommit cb5da8847002bf42e94f512e2e0a77367d04ffcb[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 21 00:41:42 2020 +0300
+
+    Learning Express with Node
+
+[33mcommit 0363b4d1c1b2d7f28e00631989bd2ea46fafa785[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 21 00:37:44 2020 +0300
+
+    learning npm
+
+[33mcommit 23042a0348c205f3fd475e00cf76b489b1346607[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Wed May 20 17:35:54 2020 +0300
+
+    learning about node
+
+[33mcommit 5a6a4e5128afd749613843887d7ff8898edbcc32[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Wed May 20 15:15:47 2020 +0300
+
+    Learning nodejs
+    
+    Learning backend
+
+[33mcommit 1834327e46679362eb1e5127eafb3c11d1e28f6f[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sun May 17 21:22:22 2020 +0300
+
+    Updated loss state
+    
+    impoved user lose state, gave more inforamstion of player proggres at lost point
+
+[33mcommit 8d313177ecc8ccea559895a6d32d318c5fef9753[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sun May 17 21:17:51 2020 +0300
+
+    Simon says game finished
+    
+    Finished simon says game, with kristaps.
+
+[33mcommit 3f6c0025baadf1e9e85bdec67b71f89e4c651b92[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sun May 17 19:15:33 2020 +0300
+
+    level 0 working
+
+[33mcommit 913fbab7273db6d9f80cb810c9f653bceb2f017b[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sat May 16 00:52:07 2020 +0300
+
+    working on simon say
+
+[33mcommit 3832c1ffc16bef5f8b26cbb7d75064c2a26514b1[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Fri May 15 18:23:18 2020 +0300
+
+    try two simon game with game-v2.js
+
+[33mcommit 25c19e3440135882ed241fe24f06750f6e132bb1[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Fri May 15 13:25:55 2020 +0300
+
+    Creating the Simon Game
+
+[33mcommit 185152dc22c5ff80699fdae0e56e337bd9acdd54[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 14 21:36:26 2020 +0300
+
+    learning jquery level two agian
+
+[33mcommit 27af154c614eb2c381549fd3aef90918bff29a65[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 14 17:31:22 2020 +0300
+
+    finished
+
+[33mcommit 5739d286efdcd7f9f6d1f6797577a956a80555cb[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 14 17:30:26 2020 +0300
+
+    Delete index_two.js
+
+[33mcommit 7e7ceb16468813252881ae95a5c493c4d700ee3e[m
+Merge: 2c78edd 8d5ab9b
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 14 17:27:56 2020 +0300
+
+    Merge branch 'master' of https://github.com/peterlloydskubur/Learning-Web-Development
+
+[33mcommit 2c78edd8b5da52632fbaa99fd24ef6f78ec139a3[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 14 17:26:58 2020 +0300
+
+    Update index.js
+
+[33mcommit 8d5ab9b9b3f3539858bc5b901cae7874080a56d9[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 14 14:40:40 2020 +0300
+
+    Finished DrumKit Website
+
+[33mcommit d3d15f23f54e34189130d689f1d2500ff3c39dd9[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Thu May 14 01:05:17 2020 +0300
+
+    push the babz
+
+[33mcommit 03932df8f3a3425184bed25829643b7316fa11c8[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Wed May 13 13:25:52 2020 +0300
+
+    keyboard presses work
+
+[33mcommit f4bc197eea3d48778785d8ad156666c3b0898d55[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Tue May 12 19:42:14 2020 +0300
+
+    Learning about this stament with switch statment
+
+[33mcommit 9d9a666538a000faf67d7ec8951d99fb5e6182a6[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Tue May 12 18:13:56 2020 +0300
+
+    a
+
+[33mcommit 074fd09772484021492b83276c83129a36753062[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Tue May 12 15:16:10 2020 +0300
+
+    changing color of button after clickj
+
+[33mcommit 892286e16d2ee071864da81e44f6b8515fe56780[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Tue May 12 13:54:01 2020 +0300
+
+    Learning advanced DOM manipulation
+
+[33mcommit 94ed571eeffed6069db8a133df25eddb8f3820d5[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Mon May 11 23:08:47 2020 +0300
+
+    Creating a Drum Machine
+
+[33mcommit 22577beae3ebe1c8f584dd175f94dff47a75a135[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Mon May 11 20:17:35 2020 +0300
+
+    Winished dice game
+
+[33mcommit cab9779273c18b041f88fdadc03bf52008463e6e[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Mon May 11 17:56:15 2020 +0300
+
+    dice game
+
+[33mcommit 4841aae9f55f43943588af201b008a33e3e9070e[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sun May 10 17:20:34 2020 +0300
+
+    Testing boostrap site hosting
+
+[33mcommit b2fa49bae277614296815dbaf0506c097bed966b[m
+Author: peterlloydskubur <63150386+peterlloydskubur@users.noreply.github.com>
+Date:   Sun May 10 17:19:14 2020 +0300
+
+    Initial commit
