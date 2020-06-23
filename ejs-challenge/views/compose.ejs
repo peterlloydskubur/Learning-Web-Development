@@ -3,9 +3,27 @@
 <h1>Compose</h1>
 
 <form method="POST" action="/compose">
-  Enter a new composition:
-  <input type="text" name="compose" />
-  <button type="submit">Sumbit</button>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      name="composeTitle"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Post</label>
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      name="composeDescription"
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Publish</button>
 </form>
 
 <%- include("partials/footer"); -%>
