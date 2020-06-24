@@ -16,14 +16,15 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-const posts = [];
+let posts = [];
 
 app.get('/', (req, res) => {
-  console.log(posts);
-
   res.render('home', {
     homeStartingContent: homeStartingContent,
+    posts: posts,
+    postsLenght: posts.length,
   });
+  //Some new stuff here
 });
 
 app.get('/about', (req, res) => {
@@ -53,7 +54,6 @@ app.post('/compose', (req, res) => {
   res.redirect('/');
 });
 
-// Somechange here
 app.listen(3000, function () {
   console.log('Server started on port 3000');
 });

@@ -4,4 +4,20 @@
 
 <p><%= homeStartingContent %></p>
 
+<ul class="list-unstyled">
+  <% if(postsLenght === 0 ) { %>
+
+  <h2>Post something new!</h2>
+
+  <% } else { for( let index = 0; index < posts.length; index++ ) { %>
+
+  <li class="media">
+    <div class="media-body">
+      <h4 class="mt-0 mb-1"><%=posts[index].postTitle%></h4>
+      <%= posts[index].postDescription %>
+    </div>
+  </li>
+  <% } } %>
+</ul>
+
 <%- include("partials/footer"); -%>
