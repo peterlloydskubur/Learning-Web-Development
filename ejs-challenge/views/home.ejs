@@ -12,15 +12,16 @@
     POST
   </a>
 
-  <% } else { for( let index = 0; index < posts.length; index++ ) { %>
+  <% } else { posts.forEach(function(post){ %>
 
   <li class="media">
     <div class="media-body">
-      <h4 class="mt-0 mb-1"><%=posts[index].postTitle%></h4>
-      <%= posts[index].postDescription %>
+      <h4 class="mt-0 mb-1"><%=post.postTitle%></h4>
+      <%= post.postDescription %>
     </div>
   </li>
-  <% } } %>
+
+  <% }); } %>
 </ul>
 
 <%- include("partials/footer"); -%>
