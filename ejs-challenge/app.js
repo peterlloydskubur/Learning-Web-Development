@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
   res.render('home', {
     homeStartingContent: homeStartingContent,
     posts: posts,
+    // HOW CAN MAKE IT WORK AS LINK??? postsKebab: _.lowerCase(posts),
     postsLenght: posts.length,
   });
-  //Some new stuff here
 });
 
 app.get('/about', (req, res) => {
@@ -48,9 +48,12 @@ app.post('/compose', (req, res) => {
   const post = {
     postTitle: req.body.composeTitle,
     postDescription: req.body.composeDescription,
+    postKebab: _.kebabCase(req.body.composeTitle),
   };
 
   posts.push(post);
+
+  console.log(posts);
 
   res.redirect('/');
 });

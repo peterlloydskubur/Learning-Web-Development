@@ -17,7 +17,9 @@
   <li class="media">
     <div class="media-body">
       <h4 class="mt-0 mb-1"><%=post.postTitle %></h4>
-      <%= post.postDescription %>
+      <%= post.postDescription.substring(0,100) + "..." %>
+      <!-- prettier-ignore -->
+      <a href=<%="/posts/" + post.postKebab %> > Read more</a>
     </div>
   </li>
 
