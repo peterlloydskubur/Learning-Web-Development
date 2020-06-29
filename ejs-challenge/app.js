@@ -23,7 +23,6 @@ app.get('/', (req, res) => {
   res.render('home', {
     homeStartingContent: homeStartingContent,
     posts: posts,
-    // HOW CAN MAKE IT WORK AS LINK??? postsKebab: _.lowerCase(posts),
     postsLenght: posts.length,
   });
 });
