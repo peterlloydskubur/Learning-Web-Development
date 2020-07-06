@@ -31,32 +31,71 @@ const fruitLayout = new mongoose.Schema({
 // Creating model/collection for fruit db and with Schema "fruitLayout"
 const Fruit = mongoose.model('fruit', fruitLayout);
 
-const fruit = new Fruit({
-  rating: 7,
-  review: 'Something something',
+const chirios = new Fruit({
+  name: 'Chirios',
+  rating: 9,
+  review: 'alles is sehr gut ',
   stock: 10,
 });
 
-fruit.save();
+chirios.save();
 
 //Creating people Schema
 const personSchema = new mongoose.Schema({
   name: String,
   age: Number,
+  favouriteFruit: fruitLayout,
 });
 
 // Creating model/collection for fruit db with Schema "personSchema"
 const Person = mongoose.model('Person', personSchema);
 
-// Reading and displaying data
-Fruit.find(function (err, fruits) {
+Person.updateOne({ name: 'John' }, { favouriteFruit: chirios }, function (err) {
   if (err) {
     console.log(err);
   } else {
-    mongoose.connection.close();
-
-    fruits.forEach(function (fruit) {
-      console.log(fruit.name);
-    });
+    console.log('Succesfully updated ');
   }
 });
+
+// person.save();
+
+// //Deleting many repeated entries with "John"
+// Person.deleteMany({ name: 'John' }, function (err) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('Deleted sucessfuly');
+//   }
+// });
+
+// //Updating data
+// Fruit.updateOne({ name: 'Fish' }, { rating: 9 }, function (err) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('Succesfully updated ');
+//   }
+// });
+
+// //Deleting data
+// Fruit.deleteOne({ name: 'Fish' }, function (err) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('Deleted the post');
+//   }
+// });
+
+// // Reading and displaying data
+// Fruit.find(function (err, fruits) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     mongoose.connection.close();
+
+//     fruits.forEach(function (fruit) {
+//       console.log(fruit);
+//     });
+//   }
+// });
