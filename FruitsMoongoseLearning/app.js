@@ -58,7 +58,7 @@ Person.updateOne({ name: 'John' }, { favouriteFruit: chirios }, function (err) {
   }
 });
 
-// person.save();
+// person.save()
 
 // //Deleting many repeated entries with "John"
 // Person.deleteMany({ name: 'John' }, function (err) {
