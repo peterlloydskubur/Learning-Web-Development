@@ -1,4 +1,4 @@
-//jshint esversion:6
+//jshint esversion:6 small change
 const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
