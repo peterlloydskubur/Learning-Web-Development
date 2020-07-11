@@ -41,39 +41,37 @@ const item3 = new Item({
 
 const defaultItems = [item1, item2, item3];
 
-// Item.insertMany(defaultItems, function (err)
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log('Updated Items document');
-//   }
-// });
-
-// Reading and displaying data
-
 // Express get and render
 app.get('/', function (req, res) {
   Item.find(function (err, items) {
-    if (err) {
-      console.log(err);
+    if (items.length === 0) {
+      Item.insertMany(defaultItems, function (err) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('Updated Items document');
+        }
+      });
+      res.redirect('/');
     } else {
       res.render('list', { listTitle: 'Today', newListItems: items });
       mongoose.connection.close();
+      // console.log(err);
     }
   });
 });
 
 // If press post from home page we do this:
 app.post('/', function (req, res) {
-  const item = req.body.newItem;
+  const itemName = req.body.newItem;
 
-  if (req.body.list === 'Work') {
-    workItems.push(item);
-    res.redirect('/work');
-  } else {
-    items.push(item);
-    res.redirect('/');
-  }
+  const item = new Item({
+    name: itemName,
+  });
+
+  item.save();
+
+  res.redirect('/');
 });
 
 app.get('/work', function (req, res) {

@@ -99,3 +99,13 @@ Person.updateOne({ name: 'John' }, { favouriteFruit: chirios }, function (err) {
 //     });
 //   }
 // });
+
+// Item.insertMany(defaultItems, function (err){
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('Updated Items document');
+//   }
+// });
+
+// Reading and displaying data
