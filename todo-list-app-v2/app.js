@@ -1,6 +1,3 @@
-//some changses bruh
-
-//jshint esversion:6 small change
 const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -55,7 +52,7 @@ app.get('/', function (req, res) {
       res.redirect('/');
     } else {
       res.render('list', { listTitle: 'Today', newListItems: items });
-      mongoose.connection.close();
+      // mongoose.connection.close();
       // console.log(err);
     }
   });
@@ -72,6 +69,19 @@ app.post('/', function (req, res) {
   item.save();
 
   res.redirect('/');
+});
+
+app.post('/delete', function (req, res) {
+  Item.deleteOne({ name: req.body.checkbox }, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Deleted the post');
+    }
+  });
+  console.log(req.body.checkbox);
+  res.redirect('/');
+  // console.log();
 });
 
 app.get('/work', function (req, res) {

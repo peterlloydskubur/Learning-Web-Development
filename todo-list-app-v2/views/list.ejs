@@ -1,15 +1,32 @@
 <%- include("header") -%>
 
+<script>
+  if ($('checkbox').is(':checked')) {
+    console.log('IM checked');
+  } else {
+    console.log('im not checked');
+  }
+
+  console.log($('checkbox').is(':checked'));
+</script>
+
 <div class="box" id="heading">
   <h1><%= listTitle %></h1>
 </div>
 
 <div class="box">
-  <% newListItems.forEach(function(listItem) { %>
-  <div class="item">
-    <input type="checkbox" />
-    <p><%= listItem.name %></p>
-  </div>
+  <% var i = 0 %> <% newListItems.forEach(function(listItem) { %>
+  <form action="/delete" method="post">
+    <div class="item">
+      <!-- prettier-ignore -->
+
+      <input type="checkbox" name="checkbox" value=<%= listItem.name %>
+      onchange="this.form.submit()">
+
+      <p><%= listItem.name %></p>
+      <% i += 1;console.log(i); %>
+    </div>
+  </form>
   <% }); %>
 
   <form class="item" action="/" method="post">
@@ -22,5 +39,4 @@
     <button type="submit" name="list">+</button>
   </form>
 </div>
-
 <%- include("footer") -%>
