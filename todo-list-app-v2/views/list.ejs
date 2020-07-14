@@ -15,16 +15,15 @@
 </div>
 
 <div class="box">
-  <% var i = 0 %> <% newListItems.forEach(function(listItem) { %>
+  <% newListItems.forEach(function(listItem) { %>
   <form action="/delete" method="post">
     <div class="item">
       <!-- prettier-ignore -->
 
-      <input type="checkbox" name="checkbox" value=<%= listItem.name %>
+      <input type="checkbox" name="checkbox" value=<%= listItem.id %>
       onchange="this.form.submit()">
 
       <p><%= listItem.name %></p>
-      <% i += 1;console.log(i); %>
     </div>
   </form>
   <% }); %>

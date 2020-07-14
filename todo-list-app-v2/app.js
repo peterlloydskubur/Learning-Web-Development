@@ -1,4 +1,5 @@
 // DIDD SOME CHANGES
+// Some more changes
 
 const mongoose = require('mongoose');
 const express = require('express');
@@ -73,8 +74,9 @@ app.post('/', function (req, res) {
   res.redirect('/');
 });
 
+// deleting post after checked box
 app.post('/delete', function (req, res) {
-  Item.deleteOne({ name: req.body.checkbox }, function (err) {
+  Item.deleteOne({ _id: req.body.checkbox }, function (err) {
     if (err) {
       console.log(err);
     } else {
