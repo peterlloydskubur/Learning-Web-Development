@@ -23,8 +23,15 @@ const itemsSchema = {
   name: { type: String },
 };
 
+const listSchema = {
+  listName: String,
+  list: [itemsSchema],
+};
+
 //Mongoose creating collection / model
 const Item = mongoose.model('Item', itemsSchema);
+
+const List = mongoose.model('List', listSchema);
 
 //Mongoose creating objects in the Item collections
 const item1 = new Item({
@@ -59,6 +66,18 @@ app.get('/', function (req, res) {
       // console.log(err);
     }
   });
+});
+
+app.get('/:customList', function (req, res) {
+  const customList = req.params.customList;
+
+  const list = new List({
+    name: customList,
+    list: defaultItems,
+  });
+  //
+  Item.findOne({ name });
+  list.save();
 });
 
 // If press post from home page we do this:
