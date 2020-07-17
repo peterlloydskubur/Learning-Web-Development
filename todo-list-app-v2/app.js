@@ -24,8 +24,8 @@ const itemsSchema = {
 };
 
 const listSchema = {
-  listName: String,
-  list: [itemsSchema],
+  name: String,
+  items: [itemsSchema],
 };
 
 //Mongoose creating collection / model
@@ -73,11 +73,27 @@ app.get('/:customList', function (req, res) {
 
   const list = new List({
     name: customList,
-    list: defaultItems,
+    items: defaultItems,
   });
-  //
-  Item.findOne({ name });
-  list.save();
+
+  List.findOne({ name: customList }, function (err, foundList) {
+    if (!err) {
+      if (!foundList) {
+        console.log('Doesnt exist');
+      } else {
+        console.log('Exists');
+        console.log(foundList.items);
+      }
+    }
+  });
+
+  // List.find({}, function (err, items) {
+  //   console.log(items);
+  // });
+
+  // list.save();
+
+  // res.redirect('/');
 });
 
 // If press post from home page we do this:
