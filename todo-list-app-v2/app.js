@@ -1,5 +1,4 @@
-// DIDD SOME CHANGES
-// Some more changes
+// Learning during night
 
 const mongoose = require('mongoose');
 const express = require('express');
@@ -71,29 +70,26 @@ app.get('/', function (req, res) {
 app.get('/:customList', function (req, res) {
   const customList = req.params.customList;
 
-  const list = new List({
-    name: customList,
-    items: defaultItems,
-  });
-
   List.findOne({ name: customList }, function (err, foundList) {
     if (!err) {
       if (!foundList) {
-        console.log('Doesnt exist');
+        //Create a new list
+        const list = new List({
+          name: customList,
+          items: defaultItems,
+        });
+
+        list.save();
+        res.redirect('/' + customList);
       } else {
-        console.log('Exists');
-        console.log(foundList.items);
+        //Show existing list
+        res.render('list', {
+          listTitle: foundList.name,
+          newListItems: foundList.items,
+        });
       }
     }
   });
-
-  // List.find({}, function (err, items) {
-  //   console.log(items);
-  // });
-
-  // list.save();
-
-  // res.redirect('/');
 });
 
 // If press post from home page we do this:
