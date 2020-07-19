@@ -119,16 +119,17 @@ app.post('/', function (req, res) {
 
 // deleting post after checked box
 app.post('/delete', function (req, res) {
-  checkedItemId = req.body.checkbox;
-  listTitle = req.body.title;
-
-  Item.findByIdAndRemove({ checkedItemId }, function (err) {
-    if (!err) {
-      console.log('Deleted checked item');
-      console.log(listTitle);
-      res.redirect('/');
+  List.findOneAndUpdate(
+    { name: req.body.title },
+    {
+      $pull: { items: { _id: req.body.checkbox } },
+      function(err, result) {
+        console.log(result);
+      },
     }
-  });
+  );
+
+  res.redirect('/' + req.body.title);
 });
 
 app.get('/work', function (req, res) {
