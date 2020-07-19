@@ -119,17 +119,27 @@ app.post('/', function (req, res) {
 
 // deleting post after checked box
 app.post('/delete', function (req, res) {
-  List.findOneAndUpdate(
-    { name: req.body.title },
-    {
-      $pull: { items: { _id: req.body.checkbox } },
-      function(err, result) {
-        console.log(result);
-      },
-    }
-  );
-
-  res.redirect('/' + req.body.title);
+  if (req.body.title === 'Today') {
+    Item.deleteOne({ _id: req.body.checkbox }, function (err) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('Deleted the post' + req.body.checkbox);
+        res.redirect('/');
+      }
+    });
+  } else {
+    List.findOneAndUpdate(
+      { name: req.body.title },
+      {
+        $pull: { items: { _id: req.body.checkbox } },
+        function(err, result) {
+          console.log(result);
+        },
+      }
+    );
+    res.redirect('/' + req.body.title);
+  }
 });
 
 app.get('/work', function (req, res) {
