@@ -96,27 +96,39 @@ app.get('/:customList', function (req, res) {
 app.post('/', function (req, res) {
   const itemName = req.body.newItem;
 
+  const listName = req.body.list;
+
   const item = new Item({
     name: itemName,
   });
 
-  item.save();
-
-  res.redirect('/');
+  //Checking if adding a new item ON home page
+  if (listName === 'Today') {
+    item.save();
+    res.redirect('/');
+    //Adding new item on CUSTOM URL list
+  } else {
+    List.findOne({ name: listName }, function (err, foundList) {
+      foundList.items.push(item);
+      foundList.save();
+      res.redirect('/' + listName);
+      console.log(foundList.items);
+    });
+  }
 });
 
 // deleting post after checked box
 app.post('/delete', function (req, res) {
-  Item.deleteOne({ _id: req.body.checkbox }, function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('Deleted the post');
+  checkedItemId = req.body.checkbox;
+  listTitle = req.body.title;
+
+  Item.findByIdAndRemove({ checkedItemId }, function (err) {
+    if (!err) {
+      console.log('Deleted checked item');
+      console.log(listTitle);
+      res.redirect('/');
     }
   });
-  console.log(req.body.checkbox);
-  res.redirect('/');
-  // console.log();
 });
 
 app.get('/work', function (req, res) {

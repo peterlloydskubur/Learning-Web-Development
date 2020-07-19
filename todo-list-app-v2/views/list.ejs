@@ -9,9 +9,11 @@
   <form action="/delete" method="post">
     <div class="item">
       <!-- prettier-ignore -->
+      <input name="title" type="hidden" value="<%= listTitle %> ">
 
+      <!-- prettier-ignore -->
       <input type="checkbox" name="checkbox" value=<%= listItem.id %>
-      onchange="this.form.submit()">
+      onchange="this.form.submit()" >
 
       <p><%= listItem.name %></p>
     </div>
@@ -25,7 +27,7 @@
       placeholder="New Item"
       autocomplete="off"
     />
-    <button type="submit" name="list">+</button>
+    <button type="submit" name="list" value="<%= listTitle %>">+</button>
   </form>
 </div>
 <%- include("footer") -%>
