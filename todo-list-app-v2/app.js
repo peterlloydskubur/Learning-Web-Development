@@ -96,27 +96,50 @@ app.get('/:customList', function (req, res) {
 app.post('/', function (req, res) {
   const itemName = req.body.newItem;
 
+  const listName = req.body.list;
+
   const item = new Item({
     name: itemName,
   });
 
-  item.save();
-
-  res.redirect('/');
+  //Checking if adding a new item ON home page
+  if (listName === 'Today') {
+    item.save();
+    res.redirect('/');
+    //Adding new item on CUSTOM URL list
+  } else {
+    List.findOne({ name: listName }, function (err, foundList) {
+      foundList.items.push(item);
+      foundList.save();
+      res.redirect('/' + listName);
+      console.log(foundList.items);
+    });
+  }
 });
 
 // deleting post after checked box
 app.post('/delete', function (req, res) {
-  Item.deleteOne({ _id: req.body.checkbox }, function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('Deleted the post');
-    }
-  });
-  console.log(req.body.checkbox);
-  res.redirect('/');
-  // console.log();
+  if (req.body.title === 'Today') {
+    Item.deleteOne({ _id: req.body.checkbox }, function (err) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('Deleted the post' + req.body.checkbox);
+        res.redirect('/');
+      }
+    });
+  } else {
+    List.findOneAndUpdate(
+      { name: req.body.title },
+      {
+        $pull: { items: { _id: req.body.checkbox } },
+        function(err, result) {
+          console.log(result);
+        },
+      }
+    );
+    res.redirect('/' + req.body.title);
+  }
 });
 
 app.get('/work', function (req, res) {
