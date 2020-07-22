@@ -35,19 +35,16 @@ const postSchema = {
 //Mongoose creating collection / model
 const Post = mongoose.model('Post', postSchema);
 
-//Adding new items
-// const post = new Post({
-//   title: 'Welcome to your to-do list',
-//   description: 'I am a description',
-// });
-
 let posts = [];
 
 app.get('/', function (req, res) {
   //Need to render new posts from DB
-  res.render('home', {
-    startingContent: homeStartingContent,
-    posts: posts,
+
+  Post.find(function (err, posts) {
+    res.render('home', {
+      startingContent: homeStartingContent,
+      posts: posts,
+    });
   });
 });
 
@@ -74,29 +71,14 @@ app.get('/compose', function (req, res) {
   res.render('compose');
 });
 
-app.post('/compose', function (req, res) {
-  const post = {
-    title: req.body.postTitle,
-    content: req.body.postBody,
-  };
+app.get('/posts/:postId', function (req, res) {
+  const requestedId = req.params.postId;
 
-  posts.push(post);
-
-  res.redirect('/');
-});
-
-app.get('/posts/:postName', function (req, res) {
-  const requestedTitle = _.lowerCase(req.params.postName);
-
-  posts.forEach(function (post) {
-    const storedTitle = _.lowerCase(post.title);
-
-    if (storedTitle === requestedTitle) {
-      res.render('post', {
-        title: post.title,
-        content: post.content,
-      });
-    }
+  Post.findById(requestedId, function (err, foundPost) {
+    res.render('post', {
+      title: foundPost.title,
+      description: foundPost.description,
+    });
   });
 });
 
