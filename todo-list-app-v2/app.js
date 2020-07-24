@@ -1,4 +1,4 @@
-// Learning during night, hardto understand
+// Was learning wordpress development
 
 const mongoose = require('mongoose');
 const express = require('express');
