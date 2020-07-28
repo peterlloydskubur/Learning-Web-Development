@@ -17,13 +17,13 @@ mongoose.connect('mongodb://localhost:27017/wikiDB', {
 });
 
 //Collection Article Schema
-const ArticleSchema = {
+const articleSchema = {
   name: { type: String },
   content: { type: String },
 };
 
 //Mongoose creating collection / model
-const Article = mongoose.model('Article', ArticleSchema);
+const Article = mongoose.model('Article', articleSchema);
 
 //Adding test content to collection, item1.save() to save it.
 item1 = new Article({
