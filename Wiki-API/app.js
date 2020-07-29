@@ -31,6 +31,31 @@ item1 = new Article({
   content: 'This is a content of article',
 });
 
+app.get('/articles', function (req, res) {
+  Article.find(function (err, results) {
+    if (!err) {
+      res.send(results);
+    } else {
+      res.send(err);
+    }
+  });
+});
+
+app.post('/articles', function (req, res) {
+  item2 = new Article({
+    name: req.body.title,
+    content: req.body.content,
+  });
+
+  item2.save(function (err) {
+    if (!err) {
+      res.send('Sucesfully added the new Article');
+    } else {
+      res.send('Something went wrong.');
+    }
+  });
+});
+
 app.listen(3000, function () {
   console.log('Server started on port 3000');
 });
