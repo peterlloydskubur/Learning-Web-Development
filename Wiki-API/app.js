@@ -51,7 +51,17 @@ app.post('/articles', function (req, res) {
     if (!err) {
       res.send('Sucesfully added the new Article');
     } else {
-      res.send('Something went wrong.');
+      res.send(err);
+    }
+  });
+});
+
+app.delete('/articles', function (req, res) {
+  Article.deleteMany({}, function (err) {
+    if (!err) {
+      res.send('All articles were deleted');
+    } else {
+      res.send(err);
     }
   });
 });
