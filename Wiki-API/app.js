@@ -49,7 +49,7 @@ app
 
   .post(function (req, res) {
     item2 = new Article({
-      name: req.body.title,
+      name: req.body.name,
       content: req.body.content,
     });
 
@@ -83,7 +83,20 @@ app
       }
     });
   })
-  .delete();
+  .put(function (req, res) {
+    Article.update(
+      { name: req.params.title },
+      { name: req.body.name, content: req.body.content },
+      { overwrite: true },
+      function (err) {
+        if (!err) {
+          res.send('Updated the post');
+        } else {
+          res.send(err);
+        }
+      }
+    );
+  });
 
 app.listen(3000, function () {
   console.log('Server started on port 3000');
