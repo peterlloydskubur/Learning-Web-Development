@@ -1,3 +1,5 @@
+// finishing up api learning
+
 const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -31,40 +33,57 @@ item1 = new Article({
   content: 'This is a content of article',
 });
 
-app.get('/articles', function (req, res) {
-  Article.find(function (err, results) {
-    if (!err) {
-      res.send(results);
-    } else {
-      res.send(err);
-    }
-  });
-});
+//Adding route to articles to get,post and delete articles.
+app
+  .route('/articles')
 
-app.post('/articles', function (req, res) {
-  item2 = new Article({
-    name: req.body.title,
-    content: req.body.content,
+  .get(function (req, res) {
+    Article.find(function (err, results) {
+      if (!err) {
+        res.send(results);
+      } else {
+        res.send(err);
+      }
+    });
+  })
+
+  .post(function (req, res) {
+    item2 = new Article({
+      name: req.body.title,
+      content: req.body.content,
+    });
+
+    item2.save(function (err) {
+      if (!err) {
+        res.send('Sucesfully added the new Article');
+      } else {
+        res.send(err);
+      }
+    });
+  })
+  .delete(function (req, res) {
+    Article.deleteMany({}, function (err) {
+      if (!err) {
+        res.send('All articles were deleted');
+      } else {
+        res.send(err);
+      }
+    });
   });
 
-  item2.save(function (err) {
-    if (!err) {
-      res.send('Sucesfully added the new Article');
-    } else {
-      res.send(err);
-    }
-  });
-});
+app
+  .route('/articles/:title')
 
-app.delete('/articles', function (req, res) {
-  Article.deleteMany({}, function (err) {
-    if (!err) {
-      res.send('All articles were deleted');
-    } else {
-      res.send(err);
-    }
-  });
-});
+  .get(function (req, res) {
+    Article.findOne({ name: req.params.title }, function (err, result) {
+      if (!err) {
+        res.send(result);
+      } else {
+        res.send(err);
+      }
+    });
+  })
+  .delete();
 
 app.listen(3000, function () {
   console.log('Server started on port 3000');
