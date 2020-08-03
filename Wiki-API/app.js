@@ -1,4 +1,4 @@
-// finishing up api learning
+// learning about react on codesandbox
 
 const mongoose = require('mongoose');
 const express = require('express');
@@ -37,6 +37,7 @@ item1 = new Article({
 app
   .route('/articles')
 
+  //Displaying all articles
   .get(function (req, res) {
     Article.find(function (err, results) {
       if (!err) {
@@ -47,6 +48,7 @@ app
     });
   })
 
+  //Posting a new article based on req.body information.
   .post(function (req, res) {
     item2 = new Article({
       name: req.body.name,
@@ -61,6 +63,8 @@ app
       }
     });
   })
+
+  //Deleting all articles
   .delete(function (req, res) {
     Article.deleteMany({}, function (err) {
       if (!err) {
@@ -74,6 +78,7 @@ app
 app
   .route('/articles/:title')
 
+  //Reading the article information based on title
   .get(function (req, res) {
     Article.findOne({ name: req.params.title }, function (err, result) {
       if (!err) {
@@ -83,6 +88,8 @@ app
       }
     });
   })
+
+  //Replacing the whole article with new information
   .put(function (req, res) {
     Article.update(
       { name: req.params.title },
@@ -96,6 +103,31 @@ app
         }
       }
     );
+  })
+
+  //Patching only few things from the article
+  .patch(function (req, res) {
+    Article.update(
+      //prettier-ignore, //* Replacing only info that is in req.body
+      { name: req.params.title },
+      { $set: req.body },
+      function (err) {
+        if (!err) {
+          res.send('Updated the post');
+        } else {
+          res.send(err);
+        }
+      }
+    );
+  })
+  .delete(function (req, res) {
+    Article.deleteOne({ name: req.params.title }, function (err, result) {
+      if (!err) {
+        res.send('Deleted the post' + result);
+      } else {
+        res.send(err);
+      }
+    });
   });
 
 app.listen(3000, function () {
