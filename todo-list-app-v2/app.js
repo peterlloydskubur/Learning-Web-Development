@@ -1,4 +1,4 @@
-// Learning during night
+// Learning react on web app cannot save local
 
 const mongoose = require('mongoose');
 const express = require('express');
