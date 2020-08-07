@@ -1,4 +1,4 @@
-// Learning react on web app cannot save local
+// Leraning react and such on codesandbox
 
 const mongoose = require('mongoose');
 const express = require('express');
