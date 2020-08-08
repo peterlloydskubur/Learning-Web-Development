@@ -1,4 +1,4 @@
-// Leraning react and such on codesandbox
+// Leraning react stil on codesandbox
 
 const mongoose = require('mongoose');
 const express = require('express');
