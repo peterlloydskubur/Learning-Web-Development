@@ -1,4 +1,4 @@
-// Leraning react stil on codesandbox, components
+// Components are hard
 
 const mongoose = require('mongoose');
 const express = require('express');
