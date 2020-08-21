@@ -7,6 +7,7 @@ function Post(props) {
     <div className="card">
       <div className="top">
         <h2 className="name">{props.name}</h2>
+        <p>{props.postID}</p>
         <Avatar imgURL={props.imgURL} />
       </div>
       <div className="bottom">
