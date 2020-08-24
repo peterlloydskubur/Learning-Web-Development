@@ -6,4 +6,4 @@ import './components/styles.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-//Doing a mapping exercise on codesandbox.io
+//Doing more mapping/filtering/redues exercises on codesandbox
