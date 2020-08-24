@@ -6,4 +6,4 @@ import './components/styles.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-//Doing more mapping/filtering/redues exercises on codesandbox
+//Doing more codesandbox learning about arrow functions ( => )
