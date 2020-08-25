@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
-import './components/styles.css';
+import Notes from './notes';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-//Doing more codesandbox learning about arrow functions ( => )
+//Challenge. Render all the notes inside notes.js as a seperate Note
+//component.
