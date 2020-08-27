@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Learning about conditional render operators
+//Doing conditional render practices
 
 function App(props) {
   return (
