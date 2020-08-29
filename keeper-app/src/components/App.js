@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Doing conditional render practices
+//Doing conditional render practices,I dont understand it
 
 function App(props) {
   return (
