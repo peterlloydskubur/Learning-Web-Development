@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Doing conditional render practices,I dont understand it
+//Declerative programming, and hooks
 
 function App(props) {
   return (
