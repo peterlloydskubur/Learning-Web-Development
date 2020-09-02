@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Declerative programming, and hooks
+//Learning about react hooks and rusteed design programming
 
 function App(props) {
   return (
