@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Learning about react hooks and rusteed design programming
+//Design for Rusteed and React learning
 
 function App(props) {
   return (
