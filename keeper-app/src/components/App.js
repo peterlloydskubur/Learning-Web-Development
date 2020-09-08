@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Design for Rusteed and React learning x2
+//Design for Rusteed and Event handling
 
 function App(props) {
   return (
