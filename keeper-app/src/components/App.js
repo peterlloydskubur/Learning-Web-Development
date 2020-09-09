@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Design for Rusteed and Event handling
+//" Design for Rusteed and Event handling x2"
 
 function App(props) {
   return (
