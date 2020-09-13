@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//" Design for Rusteed and React Forms x3 "
+//Complex state
 
 function App(props) {
   return (
