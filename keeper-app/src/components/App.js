@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Re-learning some previous concepts
+//Complex state practice
 
 function App(props) {
   return (
