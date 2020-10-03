@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Complex state practice
+//Spread operator practice
 
 function App(props) {
   return (
