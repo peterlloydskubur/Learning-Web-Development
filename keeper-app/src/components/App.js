@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//Spread operator practice, I suck
+//Spread operator practice, trying.
 
 function App(props) {
   return (
