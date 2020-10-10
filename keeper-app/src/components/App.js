@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//I really suck at spread operators
+//spread operators with help of stackoverflow
 
 function App(props) {
   return (
