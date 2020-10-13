@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//spread operators with help of stackoverflow
+//codesandbox
 
 function App(props) {
   return (
