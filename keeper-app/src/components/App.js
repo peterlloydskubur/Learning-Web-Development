@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//codesandbox learning
+//codesandbox learning component mapping
 
 function App(props) {
   return (
