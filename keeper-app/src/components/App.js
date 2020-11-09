@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//codesandbox learning component mapping, really trying to understand
+//trying to learn how to delet items from todo app
 
 function App(props) {
   return (
