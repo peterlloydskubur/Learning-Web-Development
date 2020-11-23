@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-//trying to learn how to delet items from todo app
+//restarting 
 
 function App(props) {
   return (
