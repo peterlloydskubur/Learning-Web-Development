@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-// trying to figure out how to add strike-trough for list items.
+// Coding again
 
 function App(props) {
   return (
