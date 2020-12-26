@@ -5,7 +5,7 @@ import Note from './Note';
 
 import newNotes from '../notes';
 
-// Coding again
+// Finished note app 
 
 function App(props) {
   return (
